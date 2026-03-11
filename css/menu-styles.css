@@ -526,10 +526,18 @@ html[dir="rtl"] .menu-item-simple:hover {
         gap: 2rem;
         transition: right var(--transition-medium);
         z-index: 999;
+        overflow: hidden;
+    }
+    
+    .nav-right:not(.active) {
+        visibility: hidden;
+        opacity: 0;
     }
     
     .nav-right.active {
         right: 0;
+        visibility: visible;
+        opacity: 1;
     }
     
     .lang-switcher {

@@ -242,34 +242,42 @@ html[dir="rtl"] .package-items li {
     
     .menu-nav-btn {
         flex-shrink: 0;
-        font-size: 0;
-        padding: 0.6rem;
-        min-width: 50px;
+        padding: 0.6rem 0.5rem;
+        min-width: 55px;
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 0.3rem;
+        font-size: 0;
+    }
+    
+    /* Hide all text content inside button */
+    .menu-nav-btn * {
+        font-size: 0;
     }
     
     .menu-nav-btn .menu-icon {
         width: 24px;
         height: 24px;
         margin: 0;
+        flex-shrink: 0;
     }
     
-    /* Show abbreviated text after icon */
-    .menu-nav-btn[data-category="petit-dejeuner"]::after { content: 'PD'; font-size: 0.6rem; }
-    .menu-nav-btn[data-category="jus-boissons"]::after { content: 'Jus'; font-size: 0.6rem; }
-    .menu-nav-btn[data-category="crepes"]::after { content: 'Crêpes'; font-size: 0.6rem; }
-    .menu-nav-btn[data-category="gaufres-pancakes"]::after { content: 'Gaufres'; font-size: 0.6rem; }
-    .menu-nav-btn[data-category="milkshakes"]::after { content: 'Milkshakes'; font-size: 0.6rem; }
+    /* Show abbreviated text via ::after */
+    .menu-nav-btn[data-category="petit-dejeuner"]::after { content: 'PD'; font-size: 0.65rem; }
+    .menu-nav-btn[data-category="jus-boissons"]::after { content: 'Jus'; font-size: 0.65rem; }
+    .menu-nav-btn[data-category="crepes"]::after { content: 'Crêpes'; font-size: 0.65rem; }
+    .menu-nav-btn[data-category="gaufres-pancakes"]::after { content: 'Gaufres'; font-size: 0.65rem; }
+    .menu-nav-btn[data-category="milkshakes"]::after { content: 'Milk'; font-size: 0.65rem; }
     
     .menu-nav-btn::after {
         display: block;
         color: inherit;
         margin-top: 0.2rem;
+        font-weight: 500;
+        white-space: nowrap;
     }
     
     .menu-nav-btn.active::after {

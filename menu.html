@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Cafe Restaurant La Cote - Asilah, Morocco</title>
+    <meta name="description" content="Découvrez notre menu - Petit Déjeuner, Crêpes, Gaufres, Jus, Mojitos et plus encore">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-text">La Cote</span>
+                <span class="logo-subtitle">Cafe & Restaurant</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="menu.html" class="nav-link active">Menu</a></li>
+                <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="fr">FR</button>
+                    <button class="lang-btn" data-lang="ar">AR</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Header -->
+    <header class="menu-header">
+        <div class="menu-header-bg"></div>
+        <div class="menu-header-overlay"></div>
+        <div class="menu-header-content">
+            <h1 class="menu-title" data-fr="Notre Menu" data-ar="قائمتنا" data-en="Our Menu">Notre Menu</h1>
+            <p class="menu-subtitle" data-fr="Découvrez nos saveurs authentiques" data-ar="اكتشف نكهاتنا الأصيلة" data-en="Discover our authentic flavors">Découvrez nos saveurs authentiques</p>
+        </div>
+    </header>
+
+    <!-- Menu Categories Navigation -->
+    <div class="menu-nav-wrapper">
+        <div class="container">
+            <div class="menu-nav">
+                <button class="menu-nav-btn active" data-category="petit-dejeuner" data-fr="Petit Déjeuner" data-ar="الفطور" data-en="Breakfast"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg> Petit Déjeuner</button>
+                <button class="menu-nav-btn" data-category="jus-boissons" data-fr="Jus & Boissons" data-ar="العصائر والمشروبات" data-en="Juices & Drinks"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2h8l2 18H6L8 2z"></path><path d="M12 6v4"></path><circle cx="12" cy="14" r="2"></circle></svg> Jus & Boissons</button>
+                <button class="menu-nav-btn" data-category="crepes" data-fr="Crêpes" data-ar="الكريب" data-en="Crêpes"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 12c0-2.2 1.8-4 4-4"></path></svg> Crêpes</button>
+                <button class="menu-nav-btn" data-category="gaufres-pancakes" data-fr="Gaufres & Pancakes" data-ar="الوافل والبان كيك" data-en="Waffles & Pancakes"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18M3 15h18M9 3v18M15 3v18"></path></svg> Gaufres & Pancakes</button>
+                <button class="menu-nav-btn" data-category="milkshakes" data-fr="Milkshakes & Mojitos" data-ar="الميلك شيك والموهيتو" data-en="Milkshakes & Mojitos"><svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3h8l1 5H7l1-5z"></path><path d="M7 8l1 13h8l1-13"></path><path d="M12 11v5"></path><circle cx="12" cy="17" r="1"></circle></svg> Milkshakes & Mojitos</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Content -->
+    <main class="menu-main">
+        <div class="container">
+            
+            <!-- PETIT DÉJEUNER -->
+            <section class="menu-section active" id="petit-dejeuner">
+                <h2 class="section-heading" data-fr="Petit Déjeuner" data-ar="الفطور" data-en="Breakfast"><svg class="heading-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg> Petit Déjeuner</h2>
+                
+                <!-- Breakfast Packages -->
+                <div class="menu-packages">
+                    <div class="menu-package">
+                        <div class="package-header">
+                            <h3 class="package-name">EXPRESS</h3>
+                            <span class="package-price">48 DH</span>
+                        </div>
+                        <ul class="package-items">
+                            <li data-fr="Boisson chaude" data-ar="مشروب ساخن" data-en="Hot drink">Boisson chaude</li>
+                            <li data-fr="Eau minérale" data-ar="ماء معدني" data-en="Mineral water">Eau minérale</li>
+                            <li data-fr="Jus d'orange" data-ar="عصير برتقال" data-en="Orange juice">Jus d'orange</li>
+                            <li data-fr="Pain au chocolat ou crêpe" data-ar="خبز بالشوكولاتة أو كريب" data-en="Pain au chocolat or crêpe">Pain au chocolat ou crêpe</li>
+                            <li data-fr="Nutella" data-ar="نوتيلا" data-en="Nutella">Nutella</li>
+                            <li data-fr="Yarout" data-ar="ياروت" data-en="Yarout">Yarout</li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-package">
+                        <div class="package-header">
+                            <h3 class="package-name">MAROCAIN</h3>
+                            <span class="package-price">44 DH</span>
+                        </div>
+                        <ul class="package-items">
+                            <li data-fr="Boisson chaude" data-ar="مشروب ساخن" data-en="Hot drink">Boisson chaude</li>
+                            <li data-fr="Eau minérale" data-ar="ماء معدني" data-en="Mineral water">Eau minérale</li>
+                            <li data-fr="Jus d'orange" data-ar="عصير برتقال" data-en="Orange juice">Jus d'orange</li>
+                            <li data-fr="Harcha" data-ar="حرشة" data-en="Harcha">Harcha</li>
+                            <li data-fr="Meloui" data-ar="ملوي" data-en="Meloui">Meloui</li>
+                            <li data-fr="Pain grillé" data-ar="خبز محمص" data-en="Toast">Pain grillé</li>
+                            <li data-fr="Jben beldi" data-ar="جبن بلدي" data-en="Local cheese">Jben beldi</li>
+                            <li data-fr="Amlou" data-ar="أملو" data-en="Amlou">Amlou</li>
+                            <li data-fr="Yarout" data-ar="ياروت" data-en="Yarout">Yarout</li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-package">
+                        <div class="package-header">
+                            <h3 class="package-name">TRADITIONNEL</h3>
+                            <span class="package-price">48 DH</span>
+                        </div>
+                        <ul class="package-items">
+                            <li data-fr="Boisson chaude" data-ar="مشروب ساخن" data-en="Hot drink">Boisson chaude</li>
+                            <li data-fr="Eau minérale" data-ar="ماء معدني" data-en="Mineral water">Eau minérale</li>
+                            <li data-fr="Jus d'orange" data-ar="عصير برتقال" data-en="Orange juice">Jus d'orange</li>
+                            <li data-fr="Pain" data-ar="خبز" data-en="Bread">Pain</li>
+                            <li data-fr="Harcha" data-ar="حرشة" data-en="Harcha">Harcha</li>
+                            <li data-fr="Fromage rouge" data-ar="جبن أحمر" data-en="Red cheese">Fromage rouge</li>
+                            <li data-fr="Jben beldi" data-ar="جبن بلدي" data-en="Local cheese">Jben beldi</li>
+                            <li data-fr="Yarout" data-ar="ياروت" data-en="Yarout">Yarout</li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-package">
+                        <div class="package-header">
+                            <h3 class="package-name">PARISIEN</h3>
+                            <span class="package-price">59 DH</span>
+                        </div>
+                        <ul class="package-items">
+                            <li data-fr="Boisson chaude" data-ar="مشروب ساخن" data-en="Hot drink">Boisson chaude</li>
+                            <li data-fr="Eau minérale" data-ar="ماء معدني" data-en="Mineral water">Eau minérale</li>
+                            <li data-fr="Jus d'orange" data-ar="عصير برتقال" data-en="Orange juice">Jus d'orange</li>
+                            <li data-fr="Toast aux oeufs" data-ar="توست بالبيض" data-en="Egg toast">Toast aux oeufs</li>
+                            <li data-fr="Fromage rouge" data-ar="جبن أحمر" data-en="Red cheese">Fromage rouge</li>
+                            <li data-fr="Dinde fumée" data-ar="ديك رومي مدخن" data-en="Smoked turkey">Dinde fumée</li>
+                            <li data-fr="Yarout" data-ar="ياروت" data-en="Yarout">Yarout</li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-package featured">
+                        <div class="package-header">
+                            <h3 class="package-name">LA CÔTE</h3>
+                            <span class="package-price">55 DH</span>
+                        </div>
+                        <ul class="package-items">
+                            <li data-fr="Boisson chaude" data-ar="مشروب ساخن" data-en="Hot drink">Boisson chaude</li>
+                            <li data-fr="Eau minérale" data-ar="ماء معدني" data-en="Mineral water">Eau minérale</li>
+                            <li data-fr="Jus d'orange" data-ar="عصير برتقال" data-en="Orange juice">Jus d'orange</li>
+                            <li data-fr="Pain" data-ar="خبز" data-en="Bread">Pain</li>
+                            <li data-fr="Oeuf beldi" data-ar="بيض بلدي" data-en="Local egg">Oeuf beldi</li>
+                            <li data-fr="Jben beldi" data-ar="جبن بلدي" data-en="Local cheese">Jben beldi</li>
+                            <li data-fr="Fromage rouge" data-ar="جبن أحمر" data-en="Red cheese">Fromage rouge</li>
+                        </ul>
+                    </div>
+
+                    <div class="menu-package">
+                        <div class="package-header">
+                            <h3 class="package-name">ESPAGNOL</h3>
+                            <span class="package-price">48 DH</span>
+                        </div>
+                        <ul class="package-items">
+                            <li data-fr="Boisson chaude" data-ar="مشروب ساخن" data-en="Hot drink">Boisson chaude</li>
+                            <li data-fr="Eau minérale" data-ar="ماء معدني" data-en="Mineral water">Eau minérale</li>
+                            <li data-fr="Jus d'orange" data-ar="عصير برتقال" data-en="Orange juice">Jus d'orange</li>
+                            <li data-fr="Purée de tomates" data-ar="صلصة طماطم" data-en="Tomato purée">Purée de tomates</li>
+                            <li data-fr="Pain grillé" data-ar="خبز محمص" data-en="Toast">Pain grillé</li>
+                            <li data-fr="Fromage rouge" data-ar="جبن أحمر" data-en="Red cheese">Fromage rouge</li>
+                            <li data-fr="Dinde fumée" data-ar="ديك رومي مدخن" data-en="Smoked turkey">Dinde fumée</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- À La Carte -->
+                <h3 class="subsection-heading" data-fr="À La Carte" data-ar="من القائمة" data-en="À La Carte"><svg class="heading-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg> À La Carte</h3>
+                <div class="menu-items-grid">
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Tajine Khliee" data-ar="طاجين الخليع" data-en="Khliee Tajine">Tajine Khliee</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">38 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Omlette Nature" data-ar="أومليت عادي" data-en="Plain Omelette">Omlette Nature</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">22 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Omlette Champignons Fromage" data-ar="أومليت بالفطر والجبن" data-en="Mushroom Cheese Omelette">Omlette Champignons Fromage</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">28 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Omlette Fromage Jambon" data-ar="أومليت بالجبن واللحم" data-en="Cheese Ham Omelette">Omlette Fromage Jambon</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">30 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Omlette Crevette Fromage" data-ar="أومليت بالروبيان والجبن" data-en="Shrimp Cheese Omelette">Omlette Crevette Fromage</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">35 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Omlette Fromage" data-ar="أومليت بالجبن" data-en="Cheese Omelette">Omlette Fromage</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">25 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Toast Fromage" data-ar="توست بالجبن" data-en="Cheese Toast">Toast Fromage</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">15 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Toast Fromage Jambon" data-ar="توست بالجبن واللحم" data-en="Cheese Ham Toast">Toast Fromage Jambon</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">20 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="2 Oeufs au Plat" data-ar="٢ بيض مقلي" data-en="2 Fried Eggs">2 Oeufs au Plat</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">22 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Croque" data-ar="كروك" data-en="Croque">Croque</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">38 DH</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- JUS & BOISSONS -->
+            <section class="menu-section" id="jus-boissons">
+                <h2 class="section-heading" data-fr="Jus & Boissons" data-ar="العصائر والمشروبات" data-en="Juices & Drinks"><svg class="heading-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2h8l2 18H6L8 2z"></path><path d="M12 6v4"></path><circle cx="12" cy="14" r="2"></circle></svg> Jus & Boissons</h2>
+                
+                <!-- Jus -->
+                <h3 class="subsection-heading" data-fr="Jus Frais" data-ar="عصائر طازجة" data-en="Fresh Juices"><svg class="heading-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 2h6v8l3 10H6l3-10V2z"></path><path d="M12 10v4"></path></svg> Jus Frais</h3>
+                <div class="menu-items-grid">
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Jus Orange" data-ar="عصير برتقال" data-en="Orange Juice">Jus Orange</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">22 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Jus Citron Gingembre" data-ar="عصير ليمون بالزنجبيل" data-en="Lemon Ginger Juice">Jus Citron Gingembre</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">25 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Jus Citron" data-ar="عصير ليمون" data-en="Lemon Juice">Jus Citron</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">20 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Jus Pomme Lait" data-ar="عصير تفاح بالحليب" data-en="Apple Milk Juice">Jus Pomme Lait</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">22 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Jus Banane Lait" data-ar="عصير موز بالحليب" data-en="Banana Milk Juice">Jus Banane Lait</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">22 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Jus Avocat Lait" data-ar="عصير أفوكادو بالحليب" data-en="Avocado Milk Juice">Jus Avocat Lait</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">32 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Jus Papaye" data-ar="عصير بابايا" data-en="Papaya Juice">Jus Papaye</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">30 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Jus Mangue" data-ar="عصير مانجو" data-en="Mango Juice">Jus Mangue</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">35 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Jus Avocat Orange" data-ar="عصير أفوكادو بالبرتقال" data-en="Avocado Orange Juice">Jus Avocat Orange</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">35 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Jus Avocat Fruits Secs" data-ar="عصير أفوكادو بالمكسرات" data-en="Avocado Dried Fruits Juice">Jus Avocat Fruits Secs</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">38 DH</span>
+                    </div>
+                </div>
+
+                <!-- Boissons Chaudes -->
+                <h3 class="subsection-heading" data-fr="Boissons Chaudes" data-ar="المشروبات الساخنة" data-en="Hot Drinks"><svg class="heading-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path></svg> Boissons Chaudes</h3>
+                <div class="menu-items-grid">
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Café Noir" data-ar="قهوة سوداء" data-en="Black Coffee">Café Noir</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">15 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Lait" data-ar="حليب" data-en="Milk">Lait</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">18 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Café Crème" data-ar="قهوة بالكريمة" data-en="Coffee Cream">Café Crème</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">15 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Café Américain" data-ar="قهوة أمريكية" data-en="American Coffee">Café Américain</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">18 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Thé Verveine" data-ar="شاي بالنعناع" data-en="Verbena Tea">Thé Verveine</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">17 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Thé au Lait" data-ar="شاي بالحليب" data-en="Tea with Milk">Thé au Lait</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">17 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Lait Chaud" data-ar="حليب ساخن" data-en="Hot Milk">Lait Chaud</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">15 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Lait Froid" data-ar="حليب بارد" data-en="Cold Milk">Lait Froid</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">15 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Chocolat Chaud" data-ar="شوكولاتة ساخنة" data-en="Hot Chocolate">Chocolat Chaud</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">18 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Thé Marocain" data-ar="الشاي المغربي" data-en="Moroccan Tea">Thé Marocain</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">15 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Cappuccino" data-ar="كابتشينو" data-en="Cappuccino">Cappuccino</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">24 DH</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CRÊPES -->
+            <section class="menu-section" id="crepes">
+                <h2 class="section-heading" data-fr="Crêpes" data-ar="الكريب" data-en="Crêpes"><svg class="heading-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 12c0-2.2 1.8-4 4-4"></path></svg> Crêpes</h2>
+                
+                <!-- Crêpes Sucrées -->
+                <h3 class="subsection-heading" data-fr="Crêpes Sucrées" data-ar="كريب حلو" data-en="Sweet Crêpes">Crêpes Sucrées</h3>
+                <div class="menu-items-grid">
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Crêpe Nutella Amandes" data-ar="كريب نوتيلا باللوز" data-en="Nutella Almonds Crêpe">Crêpe Nutella Amandes</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">35 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Crêpe Nutella Banane" data-ar="كريب نوتيلا بالموز" data-en="Nutella Banana Crêpe">Crêpe Nutella Banane</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">38 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Crêpe Nutella" data-ar="كريب نوتيلا" data-en="Nutella Crêpe">Crêpe Nutella</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">32 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Crêpe Miel Amandes" data-ar="كريب بالعسل واللوز" data-en="Honey Almonds Crêpe">Crêpe Miel Amandes</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">28 DH</span>
+                    </div>
+                    <div class="menu-item-simple featured-item">
+                        <span class="item-name" data-fr="Crêpe Royale" data-ar="كريب رويال" data-en="Royale Crêpe">Crêpe Royale</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">50 DH</span>
+                    </div>
+                </div>
+
+                <!-- Crêpes Salées -->
+                <h3 class="subsection-heading" data-fr="Crêpes Salées" data-ar="كريب مالح" data-en="Savory Crêpes">Crêpes Salées</h3>
+                <div class="menu-items-grid">
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Crêpe Fromage" data-ar="كريب بالجبن" data-en="Cheese Crêpe">Crêpe Fromage</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">30 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Crêpe Fromage Champignons" data-ar="كريب بالجبن والفطر" data-en="Cheese Mushroom Crêpe">Crêpe Fromage Champignons</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">35 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Crêpe Fromage Dinde" data-ar="كريب بالجبن والديك الرومي" data-en="Cheese Turkey Crêpe">Crêpe Fromage Dinde</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">38 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Crêpe Viande Hachée" data-ar="كريب باللحم المفروم" data-en="Minced Meat Crêpe">Crêpe Viande Hachée</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">38 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Crêpe Poulet Champignons" data-ar="كريب بالدجاج والفطر" data-en="Chicken Mushroom Crêpe">Crêpe Poulet Champignons</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">40 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Crêpe Fruits de Mer" data-ar="كريب بالمأكولات البحرية" data-en="Seafood Crêpe">Crêpe Fruits de Mer</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">55 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Crêpe Saumon" data-ar="كريب بالسلمون" data-en="Salmon Crêpe">Crêpe Saumon</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">65 DH</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- GAUFRES & PANCAKES -->
+            <section class="menu-section" id="gaufres-pancakes">
+                <h2 class="section-heading" data-fr="Gaufres & Pancakes" data-ar="الوافل والبان كيك" data-en="Waffles & Pancakes"><svg class="heading-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18M3 15h18M9 3v18M15 3v18"></path></svg> Gaufres & Pancakes</h2>
+                
+                <!-- Gaufres -->
+                <h3 class="subsection-heading" data-fr="Gaufres" data-ar="وافل" data-en="Waffles">Gaufres</h3>
+                <div class="menu-items-grid">
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Gaufre Nutella" data-ar="وافل نوتيلا" data-en="Nutella Waffle">Gaufre Nutella</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">35 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Gaufre Nutella Banane" data-ar="وافل نوتيلا بالموز" data-en="Nutella Banana Waffle">Gaufre Nutella Banane</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">40 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Gaufre Glace" data-ar="وافل بالآيس كريم" data-en="Ice Cream Waffle">Gaufre Glace</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">45 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Gaufre Miel" data-ar="وافل بالعسل" data-en="Honey Waffle">Gaufre Miel</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">30 DH</span>
+                    </div>
+                </div>
+
+                <!-- Pancakes -->
+                <h3 class="subsection-heading" data-fr="Pancakes" data-ar="بان كيك" data-en="Pancakes">Pancakes</h3>
+                <div class="menu-items-grid">
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Pancakes Framboise" data-ar="بان كيك بالتوت" data-en="Raspberry Pancakes">Pancakes Framboise</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">45 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Pancakes Miel" data-ar="بان كيك بالعسل" data-en="Honey Pancakes">Pancakes Miel</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">30 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Pancakes Fruits Saison" data-ar="بان كيك بفواكه الموسم" data-en="Seasonal Fruits Pancakes">Pancakes Fruits Saison</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">45 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Pancakes Nutella" data-ar="بان كيك نوتيلا" data-en="Nutella Pancakes">Pancakes Nutella</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">35 DH</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MILKSHAKES & MOJITOS -->
+            <section class="menu-section" id="milkshakes">
+                <h2 class="section-heading" data-fr="Milkshakes & Mojitos" data-ar="الميلك شيك والموهيتو" data-en="Milkshakes & Mojitos"><svg class="heading-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3h8l1 5H7l1-5z"></path><path d="M7 8l1 13h8l1-13"></path><path d="M12 11v5"></path><circle cx="12" cy="17" r="1"></circle></svg> Milkshakes & Mojitos</h2>
+                
+                <!-- Milkshakes -->
+                <h3 class="subsection-heading" data-fr="Milkshakes" data-ar="ميلك شيك" data-en="Milkshakes">Milkshakes</h3>
+                <p class="menu-note" data-fr="Tous les milkshakes: 42 DH" data-ar="جميع الميلك شيك: 42 درهم" data-en="All milkshakes: 42 DH">Tous les milkshakes: 42 DH</p>
+                <div class="menu-items-grid flavors-grid">
+                    <div class="flavor-item">
+                        <span data-fr="Vanille" data-ar="فانيلا" data-en="Vanilla">Vanille</span>
+                    </div>
+                    <div class="flavor-item">
+                        <span data-fr="Chocolat" data-ar="شوكولاتة" data-en="Chocolate">Chocolat</span>
+                    </div>
+                    <div class="flavor-item">
+                        <span data-fr="Caramel" data-ar="كراميل" data-en="Caramel">Caramel</span>
+                    </div>
+                    <div class="flavor-item">
+                        <span data-fr="Noisette" data-ar="بندق" data-en="Hazelnut">Noisette</span>
+                    </div>
+                    <div class="flavor-item">
+                        <span data-fr="Café" data-ar="قهوة" data-en="Coffee">Café</span>
+                    </div>
+                    <div class="flavor-item">
+                        <span data-fr="Framboise" data-ar="توت" data-en="Raspberry">Framboise</span>
+                    </div>
+                    <div class="flavor-item">
+                        <span data-fr="Banane" data-ar="موز" data-en="Banana">Banane</span>
+                    </div>
+                    <div class="flavor-item">
+                        <span data-fr="Fraise" data-ar="فراولة" data-en="Strawberry">Fraise</span>
+                    </div>
+                </div>
+
+                <!-- Mojitos -->
+                <h3 class="subsection-heading" data-fr="Mojitos" data-ar="موهيتو" data-en="Mojitos"><svg class="heading-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2h8l2 20H6L8 2z"></path><path d="M12 8v8"></path><path d="M9 12h6"></path></svg> Mojitos</h3>
+                <div class="menu-items-grid">
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Classic" data-ar="كلاسيك" data-en="Classic">Classic</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">35 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Fruits Rouge" data-ar="فواكه حمراء" data-en="Red Fruits">Fruits Rouge</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">35 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Blue Berry" data-ar="توت أزرق" data-en="Blue Berry">Blue Berry</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">45 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Blue Curacao" data-ar="كوراساو أزرق" data-en="Blue Curacao">Blue Curacao</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">45 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Passion Fruit" data-ar="فاكهة الآلام" data-en="Passion Fruit">Passion Fruit</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">45 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Mangue" data-ar="مانجو" data-en="Mango">Mangue</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">40 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Strawberry" data-ar="فراولة" data-en="Strawberry">Strawberry</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">45 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Pina Colada" data-ar "بينا كولادا" data-en="Pina Colada">Pina Colada</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">40 DH</span>
+                    </div>
+                </div>
+
+                <!-- Smoothies -->
+                <h3 class="subsection-heading" data-fr="Smoothies" data-ar="سموذي" data-en="Smoothies"><svg class="heading-icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3h8l1 5H7l1-5z"></path><path d="M7 8l1 13h8l1-13"></path></svg> Smoothies</h3>
+                <div class="menu-items-grid">
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Ananas" data-ar="أناناس" data-en="Pineapple">Ananas</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">40 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Avocat" data-ar="أفوكادو" data-en="Avocado">Avocat</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">40 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Kiwi" data-ar="كيوي" data-en="Kiwi">Kiwi</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">40 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Mangue" data-ar="مانجو" data-en="Mango">Mangue</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">40 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Dragon" data-ar="دراغون" data-en="Dragon">Dragon</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">45 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Banana Miel" data-ar="موز بالعسل" data-en="Banana Honey">Banana Miel</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">35 DH</span>
+                    </div>
+                    <div class="menu-item-simple">
+                        <span class="item-name" data-fr="Banana Kiwi" data-ar="موز بالكيوي" data-en="Banana Kiwi">Banana Kiwi</span>
+                        <span class="item-dots"></span>
+                        <span class="item-price">40 DH</span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-text">La Cote</span>
+                        <span class="logo-subtitle">Cafe & Restaurant</span>
+                    </a>
+                    <p class="footer-desc" data-fr="Fine dining au cœur d'Asilah, Maroc. Où tradition et excellence contemporaine se rencontrent." data-ar="تناول فاخر في قلب أصيلة، المغرب. حيث تلتقي التقاليد والتميز المعاصر." data-en="Fine dining in the heart of Asilah, Morocco. Where tradition meets contemporary excellence.">Fine dining au cœur d'Asilah, Maroc. Où tradition et excellence contemporaine se rencontrent.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-fr="Liens Rapides" data-ar="روابط سريعة" data-en="Quick Links">Liens Rapides</h4>
+                    <ul>
+                        <li><a href="index.html" data-fr="Accueil" data-ar="الرئيسية" data-en="Home">Accueil</a></li>
+                        <li><a href="index.html#about" data-fr="À Propos" data-ar="عنا" data-en="About">À Propos</a></li>
+                        <li><a href="menu.html" data-fr="Menu" data-ar="القائمة" data-en="Menu">Menu</a></li>
+                        <li><a href="index.html#gallery" data-fr="Galerie" data-ar="المعرض" data-en="Gallery">Galerie</a></li>
+                        <li><a href="index.html#contact" data-fr="Contact" data-ar="اتصل بنا" data-en="Contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-fr="Horaires" data-ar="ساعات العمل" data-en="Hours">Horaires</h4>
+                    <ul>
+                        <li data-fr="Lundi - Vendredi: 8h - 23h" data-ar="الإثنين - الجمعة: 8ص - 11م" data-en="Mon - Fri: 8AM - 11PM">Lundi - Vendredi: 8h - 23h</li>
+                        <li data-fr="Samedi: 9h - 0h" data-ar="السبت: 9ص - 12م" data-en="Sat: 9AM - 12AM">Samedi: 9h - 0h</li>
+                        <li data-fr="Dimanche: 9h - 22h" data-ar="الأحد: 9ص - 10م" data-en="Sun: 9AM - 10PM">Dimanche: 9h - 22h</li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4 data-fr="Suivez-nous" data-ar="تابعنا" data-en="Follow Us">Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cafe Restaurant La Cote. <span data-fr="Tous droits réservés." data-ar="جميع الحقوق محفوظة." data-en="All rights reserved.">Tous droits réservés.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="menu-script.js"></script>
+</body>
+</html>

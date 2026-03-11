@@ -549,6 +549,15 @@ html[dir="rtl"] .menu-item-simple:hover {
         padding: 0.3rem 0.5rem;
         font-size: 0.7rem;
         min-width: 30px;
+        color: var(--white-muted);
+        background: transparent;
+        border: 1px solid var(--gray-dark);
+    }
+    
+    .lang-btn.active {
+        color: var(--black);
+        background: var(--gold);
+        border-color: var(--gold);
     }
     
     /* When nav-right is NOT active (mobile menu closed), hide lang-switcher */

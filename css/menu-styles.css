@@ -269,10 +269,11 @@ html[dir="rtl"] .package-items li {
         content: attr(data-mobile);
         font-size: 0.65rem;
         display: block;
-        color: inherit;
+        color: var(--white-muted);
         margin-top: 0.2rem;
         font-weight: 500;
         white-space: nowrap;
+        line-height: 1;
     }
     
     .menu-nav-btn.active::after {
@@ -685,6 +686,12 @@ html[dir="rtl"] .menu-item-simple:hover {
     
     .menu-nav-btn::after {
         font-size: 0.55rem;
+        color: var(--white-muted);
+        line-height: 1;
+    }
+    
+    .menu-nav-btn.active::after {
+        color: var(--black);
     }
     
     /* Language switcher compact for small screens */

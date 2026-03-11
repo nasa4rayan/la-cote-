@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => revealObserver.observe(el));
 
     // ========================================
-    // Reservation Form
+    // Reservation Form - WhatsApp Integration
     // ========================================
     const reservationForm = document.getElementById('reservationForm');
 
@@ -248,23 +248,58 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = Object.fromEntries(formData);
 
         // Simple validation
-        if (!data.name || !data.email || !data.phone || !data.date || !data.time || !data.guests) {
-            showNotification('Please fill in all required fields', 'error');
+        if (!data.name || !data.phone || !data.date || !data.time || !data.guests) {
+            showNotification('Veuillez remplir tous les champs obligatoires', 'error');
             return;
         }
 
-        // Simulate form submission
-        const submitBtn = reservationForm.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
+        // Build WhatsApp message
+        const lang = document.documentElement.lang || 'fr';
+        let message = '';
+        
+        if (lang === 'fr') {
+            message = `*Nouvelle Réservation - La Cote*%0A%0A` +
+                      `👤 *Nom:* ${data.name}%0A` +
+                      `📧 *Email:* ${data.email || 'Non fourni'}%0A` +
+                      `📞 *Téléphone:* ${data.phone}%0A` +
+                      `📅 *Date:* ${data.date}%0A` +
+                      `🕐 *Heure:* ${data.time}%0A` +
+                      `👥 *Nombre d'invités:* ${data.guests}%0A` +
+                      `📝 *Demandes spéciales:* ${data.message || 'Aucune'}%0A%0A` +
+                      `Merci de confirmer cette réservation.`;
+        } else if (lang === 'ar') {
+            message = `*حجز جديد - لا كوت*%0A%0A` +
+                      `👤 *الاسم:* ${data.name}%0A` +
+                      `📧 *البريد:* ${data.email || 'غير متوفر'}%0A` +
+                      `📞 *الهاتف:* ${data.phone}%0A` +
+                      `📅 *التاريخ:* ${data.date}%0A` +
+                      `🕐 *الوقت:* ${data.time}%0A` +
+                      `👥 *عدد الضيوف:* ${data.guests}%0A` +
+                      `📝 *طلبات خاصة:* ${data.message || 'لا يوجد'}%0A%0A` +
+                      `يرجى تأكيد هذا الحجز.`;
+        } else {
+            message = `*New Reservation - La Cote*%0A%0A` +
+                      `👤 *Name:* ${data.name}%0A` +
+                      `📧 *Email:* ${data.email || 'Not provided'}%0A` +
+                      `📞 *Phone:* ${data.phone}%0A` +
+                      `📅 *Date:* ${data.date}%0A` +
+                      `🕐 *Time:* ${data.time}%0A` +
+                      `👥 *Guests:* ${data.guests}%0A` +
+                      `📝 *Special Requests:* ${data.message || 'None'}%0A%0A` +
+                      `Please confirm this reservation.`;
+        }
 
+        // Open WhatsApp with pre-filled message
+        const whatsappUrl = `https://wa.me/212661346548?text=${message}`;
+        window.open(whatsappUrl, '_blank');
+
+        // Show success notification
+        showNotification('Redirection vers WhatsApp...', 'success');
+        
+        // Reset form after a delay
         setTimeout(() => {
-            showNotification('Reservation request sent successfully! We will contact you shortly.', 'success');
             reservationForm.reset();
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }, 1500);
+        }, 2000);
     });
 
     // ========================================

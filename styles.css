@@ -807,22 +807,16 @@ html[dir="rtl"] .footer-links ul li {
     position: relative;
 }
 
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-}
-
 .form-group input,
 .form-group select,
 .form-group textarea {
     width: 100%;
-    background: var(--black-lighter);
+    padding: 1rem;
+    background: var(--black-light);
     border: 1px solid var(--gray-dark);
     color: var(--white);
-    padding: 1rem;
     font-family: var(--font-body);
-    font-size: 0.95rem;
+    font-size: 1rem;
     transition: border-color var(--transition-fast);
 }
 
@@ -836,35 +830,57 @@ html[dir="rtl"] .footer-links ul li {
 .form-group label {
     position: absolute;
     left: 1rem;
-    top: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
     color: var(--gray);
     font-size: 0.9rem;
     pointer-events: none;
     transition: all var(--transition-fast);
 }
 
+.form-group textarea + label {
+    top: 1.5rem;
+    transform: none;
+}
+
 .form-group input:focus + label,
-.form-group input:valid + label,
+.form-group input:not(:placeholder-shown) + label,
 .form-group select:focus + label,
-.form-group select:valid + label,
+.form-group select:not([value=""]) + label,
 .form-group textarea:focus + label,
-.form-group textarea:valid + label {
+.form-group textarea:not(:placeholder-shown) + label {
     top: -0.5rem;
-    left: 0.8rem;
+    left: 0.5rem;
     font-size: 0.75rem;
     color: var(--gold);
-    background: var(--black);
-    padding: 0 0.3rem;
+    background: var(--black-light);
+    padding: 0 0.5rem;
 }
 
-.form-group select {
-    cursor: pointer;
-    appearance: none;
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
 }
 
-.form-group textarea {
-    resize: vertical;
-    min-height: 100px;
+/* WhatsApp Button */
+.whatsapp-btn {
+    background: #25D366 !important;
+    border-color: #25D366 !important;
+    color: var(--white) !important;
+}
+
+.whatsapp-btn:hover {
+    background: #128C7E !important;
+    border-color: #128C7E !important;
+}
+
+/* Map Container */
+.map-container iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    display: block;
 }
 
 /* ========================================

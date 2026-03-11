@@ -515,35 +515,53 @@ html[dir="rtl"] .menu-item-simple:hover {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .nav-right {
+    .navbar {
+        background: rgba(10, 10, 10, 0.98);
+        padding: 0.8rem 0;
+    }
+
+    .nav-links {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 100%;
+        width: 80%;
+        max-width: 300px;
         height: 100vh;
-        background: var(--black);
+        background: var(--black-light);
         flex-direction: column;
+        align-items: center;
         justify-content: center;
         gap: 2rem;
         transition: right var(--transition-medium);
-        z-index: 999;
-        overflow: hidden;
+        z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
     }
     
-    .nav-right:not(.active) {
-        visibility: hidden;
-        opacity: 0;
-    }
-    
-    .nav-right.active {
+    .nav-links.active {
         right: 0;
+    }
+
+    .nav-right {
+        position: static;
+        width: auto;
+        height: auto;
+        background: transparent;
+        flex-direction: row;
+        gap: 1rem;
         visibility: visible;
         opacity: 1;
+        z-index: 1001;
+    }
+    
+    .nav-toggle {
+        display: flex;
+        z-index: 1002;
     }
     
     .lang-switcher {
+        display: flex !important;
         flex-direction: row;
-        gap: 0.2rem;
+        gap: 0.3rem;
     }
     
     .lang-btn {
@@ -560,14 +578,9 @@ html[dir="rtl"] .menu-item-simple:hover {
         background: var(--gold);
         border-color: var(--gold);
     }
-    
-    /* When nav-right is NOT active (mobile menu closed), hide lang-switcher */
-    .nav-right:not(.active) .lang-switcher {
-        display: none;
-    }
-    
+
     .menu-nav-wrapper {
-        top: 70px;
+        top: 60px;
     }
     
     .menu-packages {

@@ -1080,12 +1080,17 @@ html[dir="rtl"] .footer-links ul li {
     }
     
     .about-images {
-        height: 400px;
+        height: 450px;
         order: -1;
     }
     
     .about-content {
         padding-left: 0;
+        text-align: center;
+    }
+
+    .about-features {
+        justify-content: center;
     }
     
     .contact-grid {

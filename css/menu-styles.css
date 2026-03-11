@@ -250,12 +250,11 @@ html[dir="rtl"] .package-items li {
         align-items: center;
         justify-content: center;
         gap: 0.3rem;
-        font-size: 0;
     }
     
-    /* Hide all text content inside button */
-    .menu-nav-btn * {
-        font-size: 0;
+    /* Hide long text on mobile */
+    .menu-nav-btn .btn-text {
+        display: none;
     }
     
     .menu-nav-btn .menu-icon {
@@ -265,14 +264,10 @@ html[dir="rtl"] .package-items li {
         flex-shrink: 0;
     }
     
-    /* Show abbreviated text via ::after */
-    .menu-nav-btn[data-category="petit-dejeuner"]::after { content: 'PD'; font-size: 0.65rem; }
-    .menu-nav-btn[data-category="jus-boissons"]::after { content: 'Jus'; font-size: 0.65rem; }
-    .menu-nav-btn[data-category="crepes"]::after { content: 'Crêpes'; font-size: 0.65rem; }
-    .menu-nav-btn[data-category="gaufres-pancakes"]::after { content: 'Gaufres'; font-size: 0.65rem; }
-    .menu-nav-btn[data-category="milkshakes"]::after { content: 'Milk'; font-size: 0.65rem; }
-    
+    /* Show short mobile text via ::after using data-mobile attribute */
     .menu-nav-btn::after {
+        content: attr(data-mobile);
+        font-size: 0.65rem;
         display: block;
         color: inherit;
         margin-top: 0.2rem;
@@ -663,13 +658,6 @@ html[dir="rtl"] .menu-item-simple:hover {
         width: 20px;
         height: 20px;
     }
-    
-    /* Even shorter text for very small screens */
-    .menu-nav-btn[data-category="petit-dejeuner"]::after { content: 'PD'; }
-    .menu-nav-btn[data-category="jus-boissons"]::after { content: 'Jus'; }
-    .menu-nav-btn[data-category="crepes"]::after { content: 'Crêpe'; }
-    .menu-nav-btn[data-category="gaufres-pancakes"]::after { content: 'Gaufre'; }
-    .menu-nav-btn[data-category="milkshakes"]::after { content: 'Milk'; }
     
     .menu-nav-btn::after {
         font-size: 0.55rem;

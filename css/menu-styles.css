@@ -534,11 +534,13 @@ html[dir="rtl"] .menu-item-simple:hover {
     
     .lang-switcher {
         flex-direction: row;
+        gap: 0.3rem;
     }
     
     .lang-btn {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
+        padding: 0.4rem 0.6rem;
+        font-size: 0.75rem;
+        min-width: 35px;
     }
     
     .menu-nav-wrapper {

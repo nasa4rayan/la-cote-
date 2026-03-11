@@ -665,6 +665,17 @@ html[dir="rtl"] .menu-item-simple:hover {
         font-size: 0.55rem;
     }
     
+    /* Language switcher compact for small screens */
+    .lang-switcher {
+        gap: 0.2rem;
+    }
+    
+    .lang-btn {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.7rem;
+        min-width: 30px;
+    }
+    
     .section-heading {
         font-size: 1.3rem;
         margin-bottom: 1.2rem;

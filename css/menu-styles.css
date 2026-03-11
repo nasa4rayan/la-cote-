@@ -204,6 +204,9 @@ html[dir="rtl"] .package-items li {
     cursor: pointer;
     transition: all var(--transition-fast);
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .menu-nav-btn:hover {
@@ -215,6 +218,63 @@ html[dir="rtl"] .package-items li {
     background: var(--gold);
     border-color: var(--gold);
     color: var(--black);
+}
+
+/* Mobile: Show only icons or short text */
+@media (max-width: 768px) {
+    .menu-nav-wrapper {
+        top: 70px;
+    }
+    
+    .menu-nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding: 0.5rem 0.4rem;
+        gap: 0.3rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    
+    .menu-nav::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .menu-nav-btn {
+        flex-shrink: 0;
+        font-size: 0;
+        padding: 0.6rem;
+        min-width: 50px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+    }
+    
+    .menu-nav-btn .menu-icon {
+        width: 24px;
+        height: 24px;
+        margin: 0;
+    }
+    
+    /* Show abbreviated text after icon */
+    .menu-nav-btn[data-category="petit-dejeuner"]::after { content: 'PD'; font-size: 0.6rem; }
+    .menu-nav-btn[data-category="jus-boissons"]::after { content: 'Jus'; font-size: 0.6rem; }
+    .menu-nav-btn[data-category="crepes"]::after { content: 'Crêpes'; font-size: 0.6rem; }
+    .menu-nav-btn[data-category="gaufres-pancakes"]::after { content: 'Gaufres'; font-size: 0.6rem; }
+    .menu-nav-btn[data-category="milkshakes"]::after { content: 'Milkshakes'; font-size: 0.6rem; }
+    
+    .menu-nav-btn::after {
+        display: block;
+        color: inherit;
+        margin-top: 0.2rem;
+    }
+    
+    .menu-nav-btn.active::after {
+        color: var(--black);
+    }
 }
 
 /* Menu Main Content */
@@ -482,39 +542,6 @@ html[dir="rtl"] .menu-item-simple:hover {
         top: 70px;
     }
     
-    .menu-nav {
-        justify-content: flex-start;
-        overflow-x: auto;
-        flex-wrap: nowrap;
-        padding: 0.6rem 0.5rem;
-        gap: 0.4rem;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-    }
-    
-    .menu-nav::-webkit-scrollbar {
-        display: none;
-    }
-    
-    .menu-nav-btn {
-        flex-shrink: 0;
-        font-size: 0.7rem;
-        padding: 0.5rem 0.6rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.2rem;
-        min-width: 60px;
-        text-align: center;
-        line-height: 1.2;
-    }
-    
-    .menu-nav-btn .menu-icon {
-        width: 20px;
-        height: 20px;
-        margin: 0;
-    }
-    
     .menu-packages {
         grid-template-columns: 1fr;
         gap: 1rem;
@@ -612,22 +639,6 @@ html[dir="rtl"] .menu-item-simple:hover {
     
     .menu-nav-wrapper {
         top: 60px;
-    }
-    
-    .menu-nav {
-        padding: 0.5rem 0.4rem;
-        gap: 0.3rem;
-    }
-    
-    .menu-nav-btn {
-        font-size: 0.65rem;
-        padding: 0.4rem 0.5rem;
-        min-width: 55px;
-    }
-    
-    .menu-nav-btn .menu-icon {
-        width: 18px;
-        height: 18px;
     }
     
     .section-heading {
